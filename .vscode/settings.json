@@ -3,5 +3,24 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#00FD61",
+    //
+    "titleBar.activeBackground": "#00FD61",
+    "titleBar.activeForeground": "#000000",
+    "titleBar.border": "#00FD61",
+    "titleBar.inactiveBackground": "#00fd61c3",
+    "titleBar.inactiveForeground": "#9d9d9d",
+    //
+    "activityBar.background": "#00FD61",
+    "activityBar.foreground": "#000000",
+    "activityBar.inactiveForeground": "#626262",
+    "activityBar.border": "#00FD61",
+    "activityBar.activeBorder": "#000000",
+    //
+    "statusBar.background": "#00FD61",
+    "statusBar.foreground": "#000000",
+    "statusBar.border": "#00FD61",
+  },
 }

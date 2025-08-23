@@ -14,11 +14,11 @@ export default function IndexPage() {
       <View className='bg-white w-full rounded-tr-[10rem] shadow-xl shadow-black h-full' >
         <View className='flex px-14 pt-10 gap-10'>
 
-          <Text className='base-regular font-bold text-4xl'>Vamos.</Text>
+          <Text className='base-regular font-bold text-4xl'>Empecemos.</Text>
 
           <View className='gap-2'>
-            <Text className='base-regular'>Gestioná tus timbres de forma fácil y rápida.</Text>
-            <Text className='base-regular'>Vos y quién vos quieras. Sin vueltas.</Text>
+            <Text className='base-regular'>Gestioná tus visitas desde el celu o tablet.</Text>
+            <Text className='base-regular'>Atendé por chat o llamada. Fácil, no?</Text>
           </View>
 
           <CustomButton title='Registrate' onPress={() => router.push("/sign-up")} />

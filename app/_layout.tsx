@@ -5,6 +5,7 @@ import "./global.css";
 
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({
+    "CalSans-Regular": require("../assets/fonts/CalSans-Regular.ttf"),
     "QuickSand-Bold": require("../assets/fonts/Quicksand-Bold.ttf"),
     "QuickSand-Light": require("../assets/fonts/Quicksand-Light.ttf"),
     "QuickSand-Medium": require("../assets/fonts/Quicksand-Medium.ttf"),

@@ -1,6 +1,7 @@
 import CustomButton from '@/components/CustomButton'
 import CustomInput from '@/components/CustomInput'
-import { Link } from 'expo-router'
+import { authService } from '@/services/auth'
+import { Link, router } from 'expo-router'
 import React, { useState } from 'react'
 import { Alert, Dimensions, Text, View } from 'react-native'
 
@@ -8,18 +9,20 @@ export default function SignUpPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({ firstname: '', lastname: '', email: '', password: '' });
 
-  const submit = () => {
-    if (!form.email || !form.password) Alert.alert('Error', 'Por favor, complete todos los campos.');
+  const submit = async () => {
+    const { email, password, firstname, lastname } = form;
+
+    if (!email || !password) Alert.alert('Error', 'Por favor, complete todos los campos.');
 
     setIsSubmitting(true);
 
     try {
-      // Call Appwrite API
+      await authService.signUp({ email, password, firstname, lastname });
 
       Alert.alert('Success', 'Login exitosamente!');
-      // router.replace('/');
+      router.replace('/');
     } catch (error) {
-      Alert.alert('Error', 'Hubo un problema al iniciar sesión.');
+      Alert.alert('Error', `Hubo un problema al iniciar sesión. ${error}`);
     } finally {
       setIsSubmitting(false);
     }
